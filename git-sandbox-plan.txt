@@ -16,28 +16,29 @@
    > git push 
    
 4. Pull
-   Create another clone dir as another user 
-   ＞ git clone git@github.com:zabrahair/git-sandbox.git git-sandbox-role-b
-   Update the Documents
-   ＞ mkdir land_moon; echo "I planned to landing moon now" >> land_moon/moon_plan.txt
-   > git add -A
+   a. clone another git repo to mockup another user 
+   b. add something into it.
+   c. push to remote repo
+   d. use revious repo to pull the new documents from remote repository
+   > mac$ git clone git@github.com:zabrahair/git-sandbox.git git-sandbox-role-b
+   > cd git-sandbox-role-b;mkdir land_moon; echo "I planned to landing Moon now" >> land_moon/moon_plan.txt
+   > git add --all
    > git commit -am "My first version of Moon' Plan."
-   Switch back to previous user and pull it
-   > cd ../git-sandbox-role-b
-   Pull Documents
-   > git pull
+   > git push
+   Switch back to previous directory git-sandbox and pull down the latest documents
+   > git pull 
    
 5. Branch
-   Crate a branch and switch to the branch
+   Create a branch "plan-a
    > git branch plan-a
    > git checkout plan-a
+   Check current branch
    > git branch
    Edit mars_plan.txt
-   > echo "Fist launch at Feb.8.2017" >> land_mars/mars_plan.txt
-   > git commit -am "First launch "
-   > land_mars/mars_plan.txt
-   Show content of master version
-   > git checkout master
+   > echo "First launch on Feb.8.2017" >> land_mars/mars_plan.txt
+   > cat land_mars/mars_plan.txt
+   Switch back to master and view the same file 
+   > git branch master
    > cat land_mars/mars_plan.txt
    
 6. Diff
