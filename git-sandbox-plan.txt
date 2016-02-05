@@ -39,3 +39,9 @@
    Show content of master version
    > git checkout master
    > cat land_mars/mars_plan.txt
+   
+6. Diff
+   > git diff master:./land_mars/mars_plan.txt plan-a:./land_mars/mars_plan.txt
+   
+7. Merge
+   > git merge plan-a
