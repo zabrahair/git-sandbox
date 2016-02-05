@@ -8,8 +8,37 @@
    c. Save the file as name land_mar_plan.txt
    ＞　mkdir land_mars; echo "I planned to landing Mars on 2017" >> land_mars/mars_plan.txt
    d. Add and Commit new untrack folders and files
-   >　git commit -am "My first version of Mars' Plan."
+   > git add --all
+   > git commit -am "My first version of Mars' Plan."
    ps: now updates are in local git repository.
    
-3. Push to Remote Repo on Github Site
+3. Push 
+   Push local documents to Remote Repo on Github Site
    > git push 
+   
+4. Pull
+   a. clone another git repo to mockup another user 
+   b. add something into it.
+   c. push to remote repo
+   d. use revious repo to pull the new documents from remote repository
+   > mac$ git clone git@github.com:zabrahair/git-sandbox.git git-sandbox-role-b
+   > cd git-sandbox-role-b;mkdir land_moon; echo "I planned to landing Moon now" >> land_moon/moon_plan.txt
+   > git add --all
+   > git commit -am "My first version of Moon' Plan."
+   > git push
+   Switch back to previous directory git-sandbox and pull down the latest documents
+   > git pull 
+   
+5. Branch
+   Create a branch "plan-a
+   > git branch plan-a
+   > git checkout plan-a
+   Check current branch
+   > git branch
+   Edit mars_plan.txt
+   > echo "First launch on Feb.8.2017" >> land_mars/mars_plan.txt
+   > cat land_mars/mars_plan.txt
+   Switch back to master and view the same file 
+   > git branch master
+   > cat land_mars/mars_plan.txt
+   
