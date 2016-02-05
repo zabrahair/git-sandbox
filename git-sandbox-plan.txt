@@ -1,0 +1,15 @@
+1. Clone
+＞　git -i ~/.ssh/github-git_sandbox-macbook clone git@github.com:zabrahair/git-sandbox.git
+
+2. Add
+   a. Make a new folder name of land_mars
+   b. Edit a document of Landing Mars.
+      I want to land to Mars on 2017.
+   c. Save the file as name land_mar_plan.txt
+   ＞　mkdir land_mars; echo "I planned to landing Mars on 2017" >> land_mars/mars_plan.txt
+   d. Add and Commit new untrack folders and files
+   >　git commit -am "My first version of Mars' Plan."
+   ps: now updates are in local git repository.
+   
+3. Push to Remote Repo on Github Site
+   > git push 
