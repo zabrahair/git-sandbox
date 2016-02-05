@@ -46,3 +46,6 @@
    
 7. Merge
    > git merge plan-a
+   
+8. Reset
+   > git reset [revision]
