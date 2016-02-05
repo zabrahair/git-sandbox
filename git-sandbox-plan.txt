@@ -1,15 +1,41 @@
 1. Clone
-＞　git -i ~/.ssh/github-git_sandbox-macbook clone git@github.com:zabrahair/git-sandbox.git
+＞ git clone git@github.com:zabrahair/git-sandbox.git git-sandbox
 
 2. Add
    a. Make a new folder name of land_mars
    b. Edit a document of Landing Mars.
       I want to land to Mars on 2017.
    c. Save the file as name land_mar_plan.txt
-   ＞　mkdir land_mars; echo "I planned to landing Mars on 2017" >> land_mars/mars_plan.txt
+   ＞ mkdir land_mars; echo "I planned to landing Mars on 2017" >> land_mars/mars_plan.txt
    d. Add and Commit new untrack folders and files
-   >　git commit -am "My first version of Mars' Plan."
+   > git add -A
+   > git commit -am "My first version of Mars' Plan."
    ps: now updates are in local git repository.
    
 3. Push to Remote Repo on Github Site
    > git push 
+   
+4. Pull
+   Create another clone dir as another user 
+   ＞ git clone git@github.com:zabrahair/git-sandbox.git git-sandbox-role-b
+   Update the Documents
+   ＞ mkdir land_moon; echo "I planned to landing moon now" >> land_moon/moon_plan.txt
+   > git add -A
+   > git commit -am "My first version of Moon' Plan."
+   Switch back to previous user and pull it
+   > cd ../git-sandbox-role-b
+   Pull Documents
+   > git pull
+   
+5. Branch
+   Crate a branch and switch to the branch
+   > git branch plan-a
+   > git checkout plan-a
+   > git branch
+   Edit mars_plan.txt
+   > echo "Fist launch at Feb.8.2017" >> land_mars/mars_plan.txt
+   > git commit -am "First launch "
+   > land_mars/mars_plan.txt
+   Show content of master version
+   > git checkout master
+   > cat land_mars/mars_plan.txt
